@@ -1,0 +1,889 @@
+{
+  "school": {
+    "name": "Mt. Fleuri Secondary School",
+    "established": 1987,
+    "urn": "MF-SEC-2024",
+    "address": "1 Academy Road, Fleuri, FL1 2AB",
+    "headteacher": "Mrs. A. Davies",
+    "academic_year": "2024-2025",
+    "key_stages": ["KS3", "KS4"],
+    "year_groups": [7, 8, 9, 10, 11]
+  },
+
+  "grade_system": {
+    "description": "GCSE 1-9 grading with KS3/KS4 sub-level tracking",
+    "grades": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "sublevels": {
+      "a": "Working hard at this grade (upper boundary)",
+      "b": "Developing confidence in this grade (mid)",
+      "c": "Just moved into this grade (lower boundary)"
+    },
+    "examples": [
+      { "code": "1a", "description": "Working hard at Grade 1" },
+      { "code": "2c", "description": "Just moved into Grade 2" },
+      { "code": "2b", "description": "Developing confidence in Grade 2" },
+      { "code": "3a", "description": "Working hard at Grade 3" },
+      { "code": "5b", "description": "Developing confidence in Grade 5" },
+      { "code": "7c", "description": "Just moved into Grade 7" },
+      { "code": "9a", "description": "Working hard at Grade 9" }
+    ]
+  },
+
+  "grade_conversion_table": [
+    { "percent_min": 90, "percent_max": 100, "grade": 9, "sublevel": "a", "code": "9a", "descriptor": "Working hard at Grade 9",            "rag": "green",  "gcse_boundary": "Grade 9 — Distinguished Performance" },
+    { "percent_min": 85, "percent_max": 89,  "grade": 9, "sublevel": "b", "code": "9b", "descriptor": "Developing confidence in Grade 9",    "rag": "green",  "gcse_boundary": "Grade 9 — Distinguished Performance" },
+    { "percent_min": 80, "percent_max": 84,  "grade": 9, "sublevel": "c", "code": "9c", "descriptor": "Just moved into Grade 9",             "rag": "green",  "gcse_boundary": "Grade 9 — Distinguished Performance" },
+    { "percent_min": 75, "percent_max": 79,  "grade": 8, "sublevel": "a", "code": "8a", "descriptor": "Working hard at Grade 8",            "rag": "green",  "gcse_boundary": "Grade 8 — Exceptional Performance" },
+    { "percent_min": 70, "percent_max": 74,  "grade": 8, "sublevel": "b", "code": "8b", "descriptor": "Developing confidence in Grade 8",    "rag": "green",  "gcse_boundary": "Grade 8 — Exceptional Performance" },
+    { "percent_min": 65, "percent_max": 69,  "grade": 8, "sublevel": "c", "code": "8c", "descriptor": "Just moved into Grade 8",             "rag": "green",  "gcse_boundary": "Grade 8 — Exceptional Performance" },
+    { "percent_min": 60, "percent_max": 64,  "grade": 7, "sublevel": "a", "code": "7a", "descriptor": "Working hard at Grade 7",            "rag": "green",  "gcse_boundary": "Grade 7 — Strong Pass" },
+    { "percent_min": 55, "percent_max": 59,  "grade": 7, "sublevel": "b", "code": "7b", "descriptor": "Developing confidence in Grade 7",    "rag": "green",  "gcse_boundary": "Grade 7 — Strong Pass" },
+    { "percent_min": 50, "percent_max": 54,  "grade": 7, "sublevel": "c", "code": "7c", "descriptor": "Just moved into Grade 7",             "rag": "green",  "gcse_boundary": "Grade 7 — Strong Pass" },
+    { "percent_min": 45, "percent_max": 49,  "grade": 6, "sublevel": "a", "code": "6a", "descriptor": "Working hard at Grade 6",            "rag": "amber",  "gcse_boundary": "Grade 6 — Good Pass" },
+    { "percent_min": 40, "percent_max": 44,  "grade": 6, "sublevel": "b", "code": "6b", "descriptor": "Developing confidence in Grade 6",    "rag": "amber",  "gcse_boundary": "Grade 6 — Good Pass" },
+    { "percent_min": 37, "percent_max": 39,  "grade": 6, "sublevel": "c", "code": "6c", "descriptor": "Just moved into Grade 6",             "rag": "amber",  "gcse_boundary": "Grade 6 — Good Pass" },
+    { "percent_min": 33, "percent_max": 36,  "grade": 5, "sublevel": "a", "code": "5a", "descriptor": "Working hard at Grade 5",            "rag": "amber",  "gcse_boundary": "Grade 5 — Strong Standard Pass" },
+    { "percent_min": 30, "percent_max": 32,  "grade": 5, "sublevel": "b", "code": "5b", "descriptor": "Developing confidence in Grade 5",    "rag": "amber",  "gcse_boundary": "Grade 5 — Strong Standard Pass" },
+    { "percent_min": 27, "percent_max": 29,  "grade": 5, "sublevel": "c", "code": "5c", "descriptor": "Just moved into Grade 5",             "rag": "amber",  "gcse_boundary": "Grade 5 — Strong Standard Pass" },
+    { "percent_min": 23, "percent_max": 26,  "grade": 4, "sublevel": "a", "code": "4a", "descriptor": "Working hard at Grade 4",            "rag": "amber",  "gcse_boundary": "Grade 4 — Standard Pass" },
+    { "percent_min": 20, "percent_max": 22,  "grade": 4, "sublevel": "b", "code": "4b", "descriptor": "Developing confidence in Grade 4",    "rag": "amber",  "gcse_boundary": "Grade 4 — Standard Pass" },
+    { "percent_min": 17, "percent_max": 19,  "grade": 4, "sublevel": "c", "code": "4c", "descriptor": "Just moved into Grade 4",             "rag": "amber",  "gcse_boundary": "Grade 4 — Standard Pass" },
+    { "percent_min": 13, "percent_max": 16,  "grade": 3, "sublevel": "a", "code": "3a", "descriptor": "Working hard at Grade 3",            "rag": "red",    "gcse_boundary": "Grade 3 — Below Standard Pass" },
+    { "percent_min": 10, "percent_max": 12,  "grade": 3, "sublevel": "b", "code": "3b", "descriptor": "Developing confidence in Grade 3",    "rag": "red",    "gcse_boundary": "Grade 3 — Below Standard Pass" },
+    { "percent_min": 7,  "percent_max": 9,   "grade": 3, "sublevel": "c", "code": "3c", "descriptor": "Just moved into Grade 3",             "rag": "red",    "gcse_boundary": "Grade 3 — Below Standard Pass" },
+    { "percent_min": 4,  "percent_max": 6,   "grade": 2, "sublevel": "a", "code": "2a", "descriptor": "Working hard at Grade 2",            "rag": "red",    "gcse_boundary": "Grade 2 — Foundation" },
+    { "percent_min": 2,  "percent_max": 3,   "grade": 2, "sublevel": "b", "code": "2b", "descriptor": "Developing confidence in Grade 2",    "rag": "red",    "gcse_boundary": "Grade 2 — Foundation" },
+    { "percent_min": 1,  "percent_max": 1,   "grade": 2, "sublevel": "c", "code": "2c", "descriptor": "Just moved into Grade 2",             "rag": "red",    "gcse_boundary": "Grade 2 — Foundation" },
+    { "percent_min": 0,  "percent_max": 0,   "grade": 1, "sublevel": "a", "code": "1a", "descriptor": "Working hard at Grade 1",            "rag": "red",    "gcse_boundary": "Grade 1 — Entry Level" }
+  ],
+
+  "rag_system": {
+    "description": "RAG confidence ratings based on current grade vs target grade",
+    "green": {
+      "label": "Green",
+      "meaning": "At or above target grade",
+      "condition": "current_grade_numeric >= target_grade_numeric",
+      "action": "Continue current approach; stretch and challenge"
+    },
+    "amber": {
+      "label": "Amber",
+      "meaning": "Within 1 full grade below target",
+      "condition": "current_grade_numeric >= (target_grade_numeric - 1)",
+      "action": "Monitor closely; light-touch intervention recommended"
+    },
+    "red": {
+      "label": "Red",
+      "meaning": "More than 1 full grade below target",
+      "condition": "current_grade_numeric < (target_grade_numeric - 1)",
+      "action": "Immediate intervention required; contact parents"
+    }
+  },
+
+  "formative_comments": {
+    "9": "Demonstrates exceptional mastery; consistently produces work of outstanding quality with sophisticated analytical skills and nuanced critical thinking.",
+    "8": "Produces high-quality work showing advanced understanding; makes perceptive connections across topics with well-developed analytical responses.",
+    "7": "Shows strong understanding and applies knowledge effectively; provides well-developed analytical responses with evidence of independent thinking.",
+    "6": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking.",
+    "5": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills.",
+    "4": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth.",
+    "3": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts.",
+    "2": "Developing basic understanding; shows early engagement with subject material and responds to structured tasks.",
+    "1": "At the earliest stage of understanding; needs significant support across all areas to access subject content."
+  },
+
+  "subjects": [
+    { "id": "SUB01", "name": "English Language",     "key_stage": ["KS3", "KS4"], "department": "English",      "compulsory": true  },
+    { "id": "SUB02", "name": "English Literature",   "key_stage": ["KS3", "KS4"], "department": "English",      "compulsory": true  },
+    { "id": "SUB03", "name": "Mathematics",           "key_stage": ["KS3", "KS4"], "department": "Mathematics",  "compulsory": true  },
+    { "id": "SUB04", "name": "Science (Combined)",    "key_stage": ["KS3", "KS4"], "department": "Science",      "compulsory": true  },
+    { "id": "SUB05", "name": "Biology",               "key_stage": ["KS4"],        "department": "Science",      "compulsory": false },
+    { "id": "SUB06", "name": "Chemistry",             "key_stage": ["KS4"],        "department": "Science",      "compulsory": false },
+    { "id": "SUB07", "name": "Physics",               "key_stage": ["KS4"],        "department": "Science",      "compulsory": false },
+    { "id": "SUB08", "name": "History",               "key_stage": ["KS3", "KS4"], "department": "Humanities",   "compulsory": false },
+    { "id": "SUB09", "name": "Geography",             "key_stage": ["KS3", "KS4"], "department": "Humanities",   "compulsory": false },
+    { "id": "SUB10", "name": "French",                "key_stage": ["KS3", "KS4"], "department": "MFL",          "compulsory": false },
+    { "id": "SUB11", "name": "Spanish",               "key_stage": ["KS3", "KS4"], "department": "MFL",          "compulsory": false },
+    { "id": "SUB12", "name": "German",                "key_stage": ["KS3", "KS4"], "department": "MFL",          "compulsory": false },
+    { "id": "SUB13", "name": "Art & Design",          "key_stage": ["KS3", "KS4"], "department": "Creative Arts","compulsory": false },
+    { "id": "SUB14", "name": "Music",                 "key_stage": ["KS3", "KS4"], "department": "Creative Arts","compulsory": false },
+    { "id": "SUB15", "name": "Drama",                 "key_stage": ["KS3", "KS4"], "department": "Creative Arts","compulsory": false },
+    { "id": "SUB16", "name": "Physical Education",    "key_stage": ["KS3", "KS4"], "department": "PE",           "compulsory": true  },
+    { "id": "SUB17", "name": "Religious Studies",     "key_stage": ["KS3", "KS4"], "department": "Humanities",   "compulsory": true  },
+    { "id": "SUB18", "name": "Computing",             "key_stage": ["KS3", "KS4"], "department": "Technology",   "compulsory": false },
+    { "id": "SUB19", "name": "Design Technology",     "key_stage": ["KS3", "KS4"], "department": "Technology",   "compulsory": false },
+    { "id": "SUB20", "name": "Food Technology",       "key_stage": ["KS3", "KS4"], "department": "Technology",   "compulsory": false }
+  ],
+
+  "users_auth": [
+    { "user_id": "U001", "email": "j.smith@teacher.mtfleuri.sch.uk",             "password_hash": "$2b$12$exampleHashTeacher001", "role": "teacher", "created_at": "2019-08-15T09:00:00Z", "last_login": "2025-01-13T08:32:10Z", "is_active": true },
+    { "user_id": "U002", "email": "s.patel@teacher.mtfleuri.sch.uk",             "password_hash": "$2b$12$exampleHashTeacher002", "role": "teacher", "created_at": "2021-08-12T09:00:00Z", "last_login": "2025-01-13T07:58:44Z", "is_active": true },
+    { "user_id": "U003", "email": "emily.johnson@student.mtfleuri.sch.uk",       "password_hash": "$2b$12$exampleHashStudent001", "role": "student", "created_at": "2022-09-01T09:00:00Z", "last_login": "2025-01-12T16:04:22Z", "is_active": true },
+    { "user_id": "U004", "email": "liam.chen@student.mtfleuri.sch.uk",           "password_hash": "$2b$12$exampleHashStudent002", "role": "student", "created_at": "2023-09-01T09:00:00Z", "last_login": "2025-01-11T14:22:05Z", "is_active": true },
+    { "user_id": "U005", "email": "aisha.okonkwo@student.mtfleuri.sch.uk",       "password_hash": "$2b$12$exampleHashStudent003", "role": "student", "created_at": "2024-09-01T09:00:00Z", "last_login": "2025-01-10T11:10:00Z", "is_active": true },
+    { "user_id": "U006", "email": "m.johnson@parent.mtfleuri.sch.uk",            "password_hash": "$2b$12$exampleHashParent001",  "role": "parent",  "created_at": "2022-09-01T09:00:00Z", "last_login": "2025-01-08T19:45:12Z", "is_active": true },
+    { "user_id": "U007", "email": "p.chen@parent.mtfleuri.sch.uk",               "password_hash": "$2b$12$exampleHashParent002",  "role": "parent",  "created_at": "2023-09-01T09:00:00Z", "last_login": "2025-01-09T20:11:55Z", "is_active": true },
+    { "user_id": "U008", "email": "b.okonkwo@parent.mtfleuri.sch.uk",            "password_hash": "$2b$12$exampleHashParent003",  "role": "parent",  "created_at": "2024-09-01T09:00:00Z", "last_login": "2025-01-07T18:30:00Z", "is_active": true }
+  ],
+
+  "teachers": [
+    {
+      "teacher_id": "T001",
+      "user_id": "U001",
+      "first_name": "James",
+      "last_name": "Smith",
+      "title": "Mr",
+      "subjects": ["Mathematics", "Physics"],
+      "year_groups": [9, 10, 11],
+      "form_tutor_group": "10A",
+      "head_of_department": "Mathematics",
+      "email": "j.smith@teacher.mtfleuri.sch.uk",
+      "employment_start": "2019-08-15"
+    },
+    {
+      "teacher_id": "T002",
+      "user_id": "U002",
+      "first_name": "Sunita",
+      "last_name": "Patel",
+      "title": "Ms",
+      "subjects": ["English Language", "English Literature"],
+      "year_groups": [8, 9, 10, 11],
+      "form_tutor_group": "9B",
+      "head_of_department": null,
+      "email": "s.patel@teacher.mtfleuri.sch.uk",
+      "employment_start": "2021-08-12"
+    }
+  ],
+
+  "parents": [
+    {
+      "parent_id": "P001",
+      "user_id": "U006",
+      "first_name": "Michelle",
+      "last_name": "Johnson",
+      "email": "m.johnson@parent.mtfleuri.sch.uk",
+      "phone": "07700900001",
+      "relationship": "Mother",
+      "student_ids": ["S001"],
+      "contact_preference": "email",
+      "access_level": "read_only"
+    },
+    {
+      "parent_id": "P002",
+      "user_id": "U007",
+      "first_name": "Peter",
+      "last_name": "Chen",
+      "email": "p.chen@parent.mtfleuri.sch.uk",
+      "phone": "07700900002",
+      "relationship": "Father",
+      "student_ids": ["S002"],
+      "contact_preference": "email",
+      "access_level": "read_only"
+    },
+    {
+      "parent_id": "P003",
+      "user_id": "U008",
+      "first_name": "Blessing",
+      "last_name": "Okonkwo",
+      "email": "b.okonkwo@parent.mtfleuri.sch.uk",
+      "phone": "07700900003",
+      "relationship": "Mother",
+      "student_ids": ["S003"],
+      "contact_preference": "phone",
+      "access_level": "read_only"
+    }
+  ],
+
+  "students": [
+    {
+      "student_id": "S001",
+      "user_id": "U003",
+      "first_name": "Emily",
+      "last_name": "Johnson",
+      "date_of_birth": "2009-03-14",
+      "grade_level": "Year 10",
+      "key_stage": "KS4",
+      "form_group": "10A",
+      "enrollment_date": "2022-09-01",
+      "sen_status": false,
+      "pp_status": false,
+      "eal_status": false,
+      "access_level": "read_only",
+      "parent_ids": ["P001"],
+      "assigned_teacher_ids": ["T001", "T002"],
+      "subjects": [
+        {
+          "subject_id": "SUB03",
+          "subject_name": "Mathematics",
+          "teacher_id": "T001",
+          "ks2_grade": "5",
+          "target_grade": 7,
+          "year": "Year 10",
+          "term1": {
+            "grade": 5,
+            "sublevel": "b",
+            "code": "5b",
+            "descriptor": "Developing confidence in Grade 5",
+            "percent_equivalent": 31,
+            "rag": "red",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term2": {
+            "grade": 6,
+            "sublevel": "c",
+            "code": "6c",
+            "descriptor": "Just moved into Grade 6",
+            "percent_equivalent": 38,
+            "rag": "amber",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "term3": {
+            "grade": 6,
+            "sublevel": "b",
+            "code": "6b",
+            "descriptor": "Developing confidence in Grade 6",
+            "percent_equivalent": 42,
+            "rag": "amber",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "flight_path": {
+            "term1_numeric": 5.33,
+            "term2_numeric": 6.0,
+            "term3_numeric": 6.33,
+            "target_numeric": 7.33,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+1 grade",
+            "expected_end_grade": "7c"
+          }
+        },
+        {
+          "subject_id": "SUB01",
+          "subject_name": "English Language",
+          "teacher_id": "T002",
+          "ks2_grade": "4",
+          "target_grade": 6,
+          "year": "Year 10",
+          "term1": {
+            "grade": 5,
+            "sublevel": "c",
+            "code": "5c",
+            "descriptor": "Just moved into Grade 5",
+            "percent_equivalent": 28,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term2": {
+            "grade": 5,
+            "sublevel": "b",
+            "code": "5b",
+            "descriptor": "Developing confidence in Grade 5",
+            "percent_equivalent": 31,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term3": {
+            "grade": 6,
+            "sublevel": "c",
+            "code": "6c",
+            "descriptor": "Just moved into Grade 6",
+            "percent_equivalent": 38,
+            "rag": "green",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "flight_path": {
+            "term1_numeric": 5.0,
+            "term2_numeric": 5.33,
+            "term3_numeric": 6.0,
+            "target_numeric": 6.33,
+            "trend": "improving",
+            "on_track": true,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "6b"
+          }
+        },
+        {
+          "subject_id": "SUB04",
+          "subject_name": "Science (Combined)",
+          "teacher_id": "T001",
+          "ks2_grade": "4",
+          "target_grade": 6,
+          "year": "Year 10",
+          "term1": {
+            "grade": 4,
+            "sublevel": "a",
+            "code": "4a",
+            "descriptor": "Working hard at Grade 4",
+            "percent_equivalent": 25,
+            "rag": "red",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "term2": {
+            "grade": 5,
+            "sublevel": "c",
+            "code": "5c",
+            "descriptor": "Just moved into Grade 5",
+            "percent_equivalent": 28,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term3": {
+            "grade": 5,
+            "sublevel": "b",
+            "code": "5b",
+            "descriptor": "Developing confidence in Grade 5",
+            "percent_equivalent": 31,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "flight_path": {
+            "term1_numeric": 4.67,
+            "term2_numeric": 5.0,
+            "term3_numeric": 5.33,
+            "target_numeric": 6.33,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+1 grade",
+            "expected_end_grade": "6c"
+          }
+        },
+        {
+          "subject_id": "SUB08",
+          "subject_name": "History",
+          "teacher_id": null,
+          "ks2_grade": "3",
+          "target_grade": 5,
+          "year": "Year 10",
+          "term1": {
+            "grade": 4,
+            "sublevel": "c",
+            "code": "4c",
+            "descriptor": "Just moved into Grade 4",
+            "percent_equivalent": 18,
+            "rag": "amber",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "term2": {
+            "grade": 4,
+            "sublevel": "b",
+            "code": "4b",
+            "descriptor": "Developing confidence in Grade 4",
+            "percent_equivalent": 21,
+            "rag": "amber",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "term3": {
+            "grade": 5,
+            "sublevel": "c",
+            "code": "5c",
+            "descriptor": "Just moved into Grade 5",
+            "percent_equivalent": 28,
+            "rag": "green",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "flight_path": {
+            "term1_numeric": 4.0,
+            "term2_numeric": 4.33,
+            "term3_numeric": 5.0,
+            "target_numeric": 5.33,
+            "trend": "improving",
+            "on_track": true,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "5b"
+          }
+        },
+        {
+          "subject_id": "SUB10",
+          "subject_name": "French",
+          "teacher_id": null,
+          "ks2_grade": "Working at Expected",
+          "target_grade": 5,
+          "year": "Year 10",
+          "term1": {
+            "grade": 3,
+            "sublevel": "a",
+            "code": "3a",
+            "descriptor": "Working hard at Grade 3",
+            "percent_equivalent": 15,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "term2": {
+            "grade": 3,
+            "sublevel": "a",
+            "code": "3a",
+            "descriptor": "Working hard at Grade 3",
+            "percent_equivalent": 15,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "term3": {
+            "grade": 4,
+            "sublevel": "c",
+            "code": "4c",
+            "descriptor": "Just moved into Grade 4",
+            "percent_equivalent": 18,
+            "rag": "red",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "flight_path": {
+            "term1_numeric": 3.67,
+            "term2_numeric": 3.67,
+            "term3_numeric": 4.0,
+            "target_numeric": 5.33,
+            "trend": "slow_progress",
+            "on_track": false,
+            "progress_from_ks2": "+0.5 grades",
+            "expected_end_grade": "4b",
+            "intervention_required": true
+          }
+        }
+      ]
+    },
+
+    {
+      "student_id": "S002",
+      "user_id": "U004",
+      "first_name": "Liam",
+      "last_name": "Chen",
+      "date_of_birth": "2010-07-22",
+      "grade_level": "Year 9",
+      "key_stage": "KS3",
+      "form_group": "9B",
+      "enrollment_date": "2023-09-01",
+      "sen_status": false,
+      "pp_status": false,
+      "eal_status": false,
+      "access_level": "read_only",
+      "parent_ids": ["P002"],
+      "assigned_teacher_ids": ["T001", "T002"],
+      "subjects": [
+        {
+          "subject_id": "SUB03",
+          "subject_name": "Mathematics",
+          "teacher_id": "T001",
+          "ks2_grade": "Greater Depth",
+          "target_grade": 8,
+          "year": "Year 9",
+          "term1": {
+            "grade": 7,
+            "sublevel": "a",
+            "code": "7a",
+            "descriptor": "Working hard at Grade 7",
+            "percent_equivalent": 62,
+            "rag": "amber",
+            "formative_comment": "Shows strong understanding and applies knowledge effectively; provides well-developed analytical responses with evidence of independent thinking."
+          },
+          "term2": {
+            "grade": 7,
+            "sublevel": "a",
+            "code": "7a",
+            "descriptor": "Working hard at Grade 7",
+            "percent_equivalent": 62,
+            "rag": "amber",
+            "formative_comment": "Shows strong understanding and applies knowledge effectively; provides well-developed analytical responses with evidence of independent thinking."
+          },
+          "term3": {
+            "grade": 8,
+            "sublevel": "c",
+            "code": "8c",
+            "descriptor": "Just moved into Grade 8",
+            "percent_equivalent": 66,
+            "rag": "green",
+            "formative_comment": "Produces high-quality work showing advanced understanding; makes perceptive connections across topics with well-developed analytical responses."
+          },
+          "flight_path": {
+            "term1_numeric": 7.67,
+            "term2_numeric": 7.67,
+            "term3_numeric": 8.0,
+            "target_numeric": 8.33,
+            "trend": "improving",
+            "on_track": true,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "8b"
+          }
+        },
+        {
+          "subject_id": "SUB01",
+          "subject_name": "English Language",
+          "teacher_id": "T002",
+          "ks2_grade": "Working at Expected",
+          "target_grade": 6,
+          "year": "Year 9",
+          "term1": {
+            "grade": 5,
+            "sublevel": "b",
+            "code": "5b",
+            "descriptor": "Developing confidence in Grade 5",
+            "percent_equivalent": 31,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term2": {
+            "grade": 6,
+            "sublevel": "c",
+            "code": "6c",
+            "descriptor": "Just moved into Grade 6",
+            "percent_equivalent": 38,
+            "rag": "green",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "term3": {
+            "grade": 6,
+            "sublevel": "b",
+            "code": "6b",
+            "descriptor": "Developing confidence in Grade 6",
+            "percent_equivalent": 42,
+            "rag": "green",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "flight_path": {
+            "term1_numeric": 5.33,
+            "term2_numeric": 6.0,
+            "term3_numeric": 6.33,
+            "target_numeric": 6.33,
+            "trend": "improving",
+            "on_track": true,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "6a"
+          }
+        },
+        {
+          "subject_id": "SUB04",
+          "subject_name": "Science (Combined)",
+          "teacher_id": "T001",
+          "ks2_grade": "5",
+          "target_grade": 7,
+          "year": "Year 9",
+          "term1": {
+            "grade": 6,
+            "sublevel": "c",
+            "code": "6c",
+            "descriptor": "Just moved into Grade 6",
+            "percent_equivalent": 38,
+            "rag": "amber",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "term2": {
+            "grade": 6,
+            "sublevel": "b",
+            "code": "6b",
+            "descriptor": "Developing confidence in Grade 6",
+            "percent_equivalent": 42,
+            "rag": "amber",
+            "formative_comment": "Demonstrates secure understanding; provides clear and well-structured explanations with evidence of growing independent thinking."
+          },
+          "term3": {
+            "grade": 7,
+            "sublevel": "c",
+            "code": "7c",
+            "descriptor": "Just moved into Grade 7",
+            "percent_equivalent": 51,
+            "rag": "green",
+            "formative_comment": "Shows strong understanding and applies knowledge effectively; provides well-developed analytical responses with evidence of independent thinking."
+          },
+          "flight_path": {
+            "term1_numeric": 6.0,
+            "term2_numeric": 6.33,
+            "term3_numeric": 7.0,
+            "target_numeric": 7.33,
+            "trend": "improving",
+            "on_track": true,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "7b"
+          }
+        },
+        {
+          "subject_id": "SUB18",
+          "subject_name": "Computing",
+          "teacher_id": null,
+          "ks2_grade": "Greater Depth",
+          "target_grade": 9,
+          "year": "Year 9",
+          "term1": {
+            "grade": 8,
+            "sublevel": "c",
+            "code": "8c",
+            "descriptor": "Just moved into Grade 8",
+            "percent_equivalent": 66,
+            "rag": "amber",
+            "formative_comment": "Produces high-quality work showing advanced understanding; makes perceptive connections across topics with well-developed analytical responses."
+          },
+          "term2": {
+            "grade": 8,
+            "sublevel": "b",
+            "code": "8b",
+            "descriptor": "Developing confidence in Grade 8",
+            "percent_equivalent": 72,
+            "rag": "amber",
+            "formative_comment": "Produces high-quality work showing advanced understanding; makes perceptive connections across topics with well-developed analytical responses."
+          },
+          "term3": {
+            "grade": 8,
+            "sublevel": "a",
+            "code": "8a",
+            "descriptor": "Working hard at Grade 8",
+            "percent_equivalent": 77,
+            "rag": "amber",
+            "formative_comment": "Produces high-quality work showing advanced understanding; makes perceptive connections across topics with well-developed analytical responses."
+          },
+          "flight_path": {
+            "term1_numeric": 8.0,
+            "term2_numeric": 8.33,
+            "term3_numeric": 8.67,
+            "target_numeric": 9.67,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+2 grades",
+            "expected_end_grade": "9c"
+          }
+        },
+        {
+          "subject_id": "SUB15",
+          "subject_name": "Drama",
+          "teacher_id": null,
+          "ks2_grade": "4",
+          "target_grade": 6,
+          "year": "Year 9",
+          "term1": {
+            "grade": 4,
+            "sublevel": "b",
+            "code": "4b",
+            "descriptor": "Developing confidence in Grade 4",
+            "percent_equivalent": 21,
+            "rag": "amber",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "term2": {
+            "grade": 5,
+            "sublevel": "c",
+            "code": "5c",
+            "descriptor": "Just moved into Grade 5",
+            "percent_equivalent": 28,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "term3": {
+            "grade": 5,
+            "sublevel": "b",
+            "code": "5b",
+            "descriptor": "Developing confidence in Grade 5",
+            "percent_equivalent": 31,
+            "rag": "amber",
+            "formative_comment": "Shows developing confidence; produces competent work with increasing accuracy, detail, and emerging analytical skills."
+          },
+          "flight_path": {
+            "term1_numeric": 4.33,
+            "term2_numeric": 5.0,
+            "term3_numeric": 5.33,
+            "target_numeric": 6.33,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+1 grade",
+            "expected_end_grade": "6c"
+          }
+        }
+      ]
+    },
+
+    {
+      "student_id": "S003",
+      "user_id": "U005",
+      "first_name": "Aisha",
+      "last_name": "Okonkwo",
+      "date_of_birth": "2011-11-05",
+      "grade_level": "Year 7",
+      "key_stage": "KS3",
+      "form_group": "7C",
+      "enrollment_date": "2024-09-01",
+      "sen_status": true,
+      "pp_status": true,
+      "eal_status": false,
+      "access_level": "read_only",
+      "parent_ids": ["P003"],
+      "assigned_teacher_ids": ["T002"],
+      "subjects": [
+        {
+          "subject_id": "SUB01",
+          "subject_name": "English Language",
+          "teacher_id": "T002",
+          "ks2_grade": "Working at Expected",
+          "target_grade": 5,
+          "year": "Year 7",
+          "term1": {
+            "grade": 3,
+            "sublevel": "b",
+            "code": "3b",
+            "descriptor": "Developing confidence in Grade 3",
+            "percent_equivalent": 11,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "term2": {
+            "grade": 3,
+            "sublevel": "a",
+            "code": "3a",
+            "descriptor": "Working hard at Grade 3",
+            "percent_equivalent": 15,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "term3": {
+            "grade": 4,
+            "sublevel": "c",
+            "code": "4c",
+            "descriptor": "Just moved into Grade 4",
+            "percent_equivalent": 18,
+            "rag": "red",
+            "formative_comment": "Working at the expected standard; demonstrates foundational understanding though with some inconsistency in application and depth."
+          },
+          "flight_path": {
+            "term1_numeric": 3.33,
+            "term2_numeric": 3.67,
+            "term3_numeric": 4.0,
+            "target_numeric": 5.33,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+0.5 grades",
+            "expected_end_grade": "4b",
+            "intervention_required": true
+          }
+        },
+        {
+          "subject_id": "SUB03",
+          "subject_name": "Mathematics",
+          "teacher_id": "T001",
+          "ks2_grade": "3",
+          "target_grade": 4,
+          "year": "Year 7",
+          "term1": {
+            "grade": 2,
+            "sublevel": "a",
+            "code": "2a",
+            "descriptor": "Working hard at Grade 2",
+            "percent_equivalent": 5,
+            "rag": "red",
+            "formative_comment": "Developing basic understanding; shows early engagement with subject material and responds to structured tasks."
+          },
+          "term2": {
+            "grade": 3,
+            "sublevel": "c",
+            "code": "3c",
+            "descriptor": "Just moved into Grade 3",
+            "percent_equivalent": 8,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "term3": {
+            "grade": 3,
+            "sublevel": "b",
+            "code": "3b",
+            "descriptor": "Developing confidence in Grade 3",
+            "percent_equivalent": 11,
+            "rag": "red",
+            "formative_comment": "Beginning to grasp key concepts; requires support to apply knowledge consistently across familiar contexts."
+          },
+          "flight_path": {
+            "term1_numeric": 2.67,
+            "term2_numeric": 3.0,
+            "term3_numeric": 3.33,
+            "target_numeric": 4.33,
+            "trend": "improving",
+            "on_track": false,
+            "progress_from_ks2": "+0.5 grades",
+            "expected_end_grade": "4c",
+            "intervention_required": true
+          }
+        }
+      ]
+    }
+  ],
+
+  "progress_tracker_template": {
+    "description": "KS3-KS4 progress tracker template — copy this structure per student/subject",
+    "template": {
+      "student_id": "PLACEHOLDER",
+      "subject_id": "PLACEHOLDER",
+      "subject_name": "PLACEHOLDER",
+      "teacher_id": "PLACEHOLDER",
+      "ks2_grade": "PLACEHOLDER (e.g. 3, 4, 5, Working at Expected, Greater Depth)",
+      "target_grade": "PLACEHOLDER (integer 1-9)",
+      "year": "PLACEHOLDER (e.g. Year 9)",
+      "term1": {
+        "grade": "PLACEHOLDER (integer 1-9)",
+        "sublevel": "PLACEHOLDER (a / b / c)",
+        "code": "PLACEHOLDER (e.g. 5b)",
+        "descriptor": "PLACEHOLDER",
+        "percent_equivalent": "PLACEHOLDER (integer 0-100)",
+        "rag": "PLACEHOLDER (green / amber / red)",
+        "formative_comment": "PLACEHOLDER"
+      },
+      "term2": {
+        "grade": "PLACEHOLDER",
+        "sublevel": "PLACEHOLDER",
+        "code": "PLACEHOLDER",
+        "descriptor": "PLACEHOLDER",
+        "percent_equivalent": "PLACEHOLDER",
+        "rag": "PLACEHOLDER",
+        "formative_comment": "PLACEHOLDER"
+      },
+      "term3": {
+        "grade": "PLACEHOLDER",
+        "sublevel": "PLACEHOLDER",
+        "code": "PLACEHOLDER",
+        "descriptor": "PLACEHOLDER",
+        "percent_equivalent": "PLACEHOLDER",
+        "rag": "PLACEHOLDER",
+        "formative_comment": "PLACEHOLDER"
+      },
+      "flight_path": {
+        "term1_numeric": "PLACEHOLDER (grade + sublevel_offset: a=0.67, b=0.33, c=0)",
+        "term2_numeric": "PLACEHOLDER",
+        "term3_numeric": "PLACEHOLDER",
+        "target_numeric": "PLACEHOLDER",
+        "trend": "PLACEHOLDER (improving / static / declining / slow_progress)",
+        "on_track": "PLACEHOLDER (true / false)",
+        "progress_from_ks2": "PLACEHOLDER (e.g. +2 grades)",
+        "expected_end_grade": "PLACEHOLDER",
+        "intervention_required": "PLACEHOLDER (true / false — optional field)"
+      }
+    }
+  },
+
+  "import_export_spec": {
+    "import": {
+      "supported_formats": ["CSV", "JSON", "XLSX"],
+      "csv_headers": [
+        "student_id", "subject_name", "ks2_grade", "target_grade", "year",
+        "term1_grade", "term1_sublevel", "term1_percent",
+        "term2_grade", "term2_sublevel", "term2_percent",
+        "term3_grade", "term3_sublevel", "term3_percent"
+      ],
+      "validation_rules": {
+        "grade": "Integer between 1 and 9",
+        "sublevel": "One of: a, b, c",
+        "percent": "Integer between 0 and 100",
+        "ks2_grade": "One of: 1, 2, 3, 4, 5, Working at Expected, Greater Depth",
+        "target_grade": "Integer between 1 and 9"
+      }
+    },
+    "export": {
+      "supported_formats": ["CSV", "JSON", "PDF"],
+      "available_exports": [
+        "single_student_report",
+        "whole_class_grades",
+        "department_overview",
+        "rag_summary",
+        "flight_path_data",
+        "intervention_list"
+      ]
+    }
+  },
+
+  "metadata": {
+    "schema_version": "1.0.0",
+    "created_at": "2025-01-13T00:00:00Z",
+    "last_updated": "2025-01-13T00:00:00Z",
+    "created_by": "Mt. Fleuri Secondary School — Data Team",
+    "notes": "All password_hash values are placeholders. In production, use bcrypt with cost factor 12 or higher. Student and parent access is strictly read-only."
+  }
+}
